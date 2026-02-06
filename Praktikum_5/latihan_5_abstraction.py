@@ -1,13 +1,8 @@
-"""
-LATIHAN 5: Abstraction & Interface (Membuat Kontrak/Standar)
-Tujuan: Memastikan semua karakter (baik Hero maupun Monster) wajib memiliki 
-        method serang dan info menggunakan modul abc
-"""
+# LATIHAN 5: Abstraction & Interface (Membuat Kontrak/Standar)
+# Tujuan: Memastikan semua karakter (baik Hero maupun Monster) wajib memiliki method serang dan info menggunakan modul abc
 
 from abc import ABC, abstractmethod
 
-# 1. Interface / Abstract Class
-# Ini adalah KONTRAK. Semua turunan wajib punya method di bawah ini.
 class GameUnit(ABC):
     
     @abstractmethod
@@ -19,12 +14,10 @@ class GameUnit(ABC):
         pass
 
 
-# 2. Implementasi pada Class Konkret
 class Hero(GameUnit):
     def __init__(self, nama):
         self.nama = nama
     
-    # Kita WAJIB membuat method serang, kalau tidak akan Error
     def serang(self, target):
         print(f"Hero {self.nama} menebas {target}!")
     
@@ -36,7 +29,6 @@ class Monster(GameUnit):
     def __init__(self, jenis):
         self.jenis = jenis
     
-    # Implementasi serang versi Monster
     def serang(self, target):
         print(f"Monster {self.jenis} menggigit {target}!")
     
@@ -44,7 +36,6 @@ class Monster(GameUnit):
         print(f"Saya adalah Monster: {self.jenis}")
 
 
-# -- Uji Coba --
 print("=== MEMBUAT HERO DAN MONSTER ===")
 h = Hero("Alucard")
 m = Monster("Serigala")
@@ -60,7 +51,7 @@ m.serang("Hero")
 print("\n=== TUGAS ANALISIS 5 ===")
 print("\n1. Mencoba membuat objek dari Abstract Class:")
 try:
-    unit = GameUnit()  # ERROR! Abstract class tidak bisa jadi objek.
+    unit = GameUnit() 
     print("Berhasil membuat GameUnit (SEHARUSNYA INI TIDAK MUNCUL!)")
 except TypeError as e:
     print(f"ERROR: {e}")
