@@ -22,8 +22,8 @@ class BarangElektronik(ABC):
     
     def __init__(self, nama, harga_dasar, stok_awal):
         self.nama = nama
-        self.__harga_dasar = harga_dasar  # Private
-        self.__stok = stok_awal  # Private
+        self.__harga_dasar = harga_dasar 
+        self.__stok = stok_awal  
     
     # PILAR 2: ENCAPSULATION - Getter
     def get_stok(self):
@@ -53,7 +53,6 @@ class BarangElektronik(ABC):
         self.__stok -= jumlah
         return True
     
-    # Abstract Methods (wajib diimplementasi oleh child class)
     @abstractmethod
     def tampilkan_detail(self):
         """Menampilkan detail barang"""
@@ -130,16 +129,13 @@ def proses_transaksi(daftar_barang):
     nomor = 1
     
     for barang, jumlah in daftar_barang:
-        # Cek stok
         if not barang.kurangi_stok(jumlah):
             print(f"⚠️  Transaksi {barang.nama} dibatalkan!\n")
             continue
         
-        # Tampilkan detail (polymorphism: method berbeda per jenis)
         print(f"{nomor}. ", end="")
         barang.tampilkan_detail()
         
-        # Hitung subtotal (polymorphism: perhitungan pajak berbeda per jenis)
         subtotal = barang.hitung_harga_total(jumlah)
         print(f" Beli: {jumlah} unit | Subtotal: Rp {subtotal:,.0f}\n")
         
@@ -225,7 +221,7 @@ def demo_polymorphism():
     print("\n--- KATALOG PRODUK ---")
     for i, produk in enumerate(produk_list, 1):
         print(f"\n{i}. ", end="")
-        produk.tampilkan_detail()  # Method sama, hasil beda (polymorphism!)
+        produk.tampilkan_detail()  
 
 
 # ============================================================================
