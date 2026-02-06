@@ -153,10 +153,10 @@ Polymorphism memungkinkan extensibility - menambah class baru (`Healer`) tanpa m
 Sistem manajemen inventaris untuk toko elektronik "TechMaster" yang menjual Laptop dan Smartphone. Sistem ini mengimplementasikan keempat pilar OOP.
 
 ### **Fitur Utama**
-1. ✅ **Abstraction:** Abstract class `BarangElektronik` sebagai template
-2. ✅ **Encapsulation:** Private attributes dengan getter/setter dan validasi
-3. ✅ **Inheritance:** Class `Laptop` dan `Smartphone` mewarisi `BarangElektronik`
-4. ✅ **Polymorphism:** Perhitungan pajak berbeda (Laptop 10%, Smartphone 5%)
+1. **Abstraction:** Abstract class `BarangElektronik` sebagai template
+2. **Encapsulation:** Private attributes dengan getter/setter dan validasi
+3. **Inheritance:** Class `Laptop` dan `Smartphone` mewarisi `BarangElektronik`
+4. **Polymorphism:** Perhitungan pajak berbeda (Laptop 10%, Smartphone 5%)
 
 ### **Anggota Kelompok**
 - Muhammad Aulia Akbar Firjatullah
