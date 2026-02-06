@@ -22,15 +22,11 @@ hero1.hp = 500
 print(f"HP Hero1 setelah diubah: {hero1.hp}")
 hero1.info()
 
-# ============================================================================
-# TUGAS ANALISIS 1 (Latihan 1 - Basic Hero)
-# ============================================================================
+"""
+============================================================================
+TUGAS ANALISIS 1 - Membuat Class Hero
+============================================================================
 
-print("=" * 70)
-print("TUGAS ANALISIS 1 - Membuat Class Hero")
-print("=" * 70)
-
-print("""
 PERTANYAAN:
 Apa yang terjadi jika kamu mengubah hero1.hp menjadi 500 setelah baris 
 hero1 = Hero...? Coba lakukan print(hero1.hp).
@@ -56,4 +52,4 @@ PENJELASAN:
 KESIMPULAN:
 Tanpa enkapsulasi, data objek rentan terhadap manipulasi yang tidak 
 terkontrol. Ini berbahaya untuk integritas data dalam aplikasi nyata.
-""")
+"""
